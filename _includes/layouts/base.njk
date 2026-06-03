@@ -19,5 +19,26 @@
       </main>
       {% include "partials/footer.njk" %}
     </div>
+    <script>
+      // Squarespace CSS hides images until parent gets data-loaded.
+      // Their loader JS used to set it; we don't ship the loader, so do it ourselves.
+      (function () {
+        function reveal() {
+          document.querySelectorAll('img').forEach(function (img) {
+            img.setAttribute('data-loaded', '');
+            var p = img.parentElement;
+            while (p && p !== document.body) {
+              p.setAttribute('data-loaded', '');
+              p = p.parentElement;
+            }
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', reveal);
+        } else {
+          reveal();
+        }
+      })();
+    </script>
   </body>
 </html>
