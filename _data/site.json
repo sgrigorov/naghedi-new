@@ -8,38 +8,84 @@
     "bookAppointment": "https://calendly.com/naghedi-booking/"
   },
   "nav": [
-    { "label": "Home", "url": "/" },
-    { "label": "Our Team", "url": "/our-team/" },
-    { "label": "Services", "url": "/services/" },
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Our Team",
+      "url": "/our-team/"
+    },
+    {
+      "label": "Services",
+      "url": "/services/"
+    },
     {
       "label": "Permanent Residence",
       "url": "/permanent-residence/",
       "children": [
-        { "label": "Economic Class", "url": "/permanent-residence/economic-class/" },
-        { "label": "Family Class", "url": "/permanent-residence/family-class/" },
-        { "label": "Business Class", "url": "/permanent-residence/business-class/" },
-        { "label": "Humanitarian & Compassionate", "url": "/permanent-residence/humanitarian-compassionate/" },
-        { "label": "Refugee Class", "url": "/permanent-residence/refugee-class/" }
+        {
+          "label": "Economic Class",
+          "url": "/permanent-residence/economic-class/"
+        },
+        {
+          "label": "Family Class",
+          "url": "/permanent-residence/family-class/"
+        },
+        {
+          "label": "Business Class",
+          "url": "/permanent-residence/business-class/"
+        },
+        {
+          "label": "Humanitarian & Compassionate",
+          "url": "/permanent-residence/humanitarian-compassionate/"
+        },
+        {
+          "label": "Refugee Class",
+          "url": "/permanent-residence/refugee-class/"
+        }
       ]
     },
     {
       "label": "Temporary Residence",
       "url": "/temporary-residence/",
       "children": [
-        { "label": "Study in Canada", "url": "/temporary-residence/study-in-canada/" },
-        { "label": "Work in Canada", "url": "/temporary-residence/work-in-canada/" },
-        { "label": "Visit Canada", "url": "/temporary-residence/visit-canada/" }
+        {
+          "label": "Study in Canada",
+          "url": "/temporary-residence/study-in-canada/"
+        },
+        {
+          "label": "Work in Canada",
+          "url": "/temporary-residence/work-in-canada/"
+        },
+        {
+          "label": "Visit Canada",
+          "url": "/temporary-residence/visit-canada/"
+        }
       ]
     },
     {
       "label": "Other",
       "url": "/other/",
       "children": [
-        { "label": "Appeals", "url": "/other/appeals/" },
-        { "label": "Citizenship", "url": "/other/citizenship/" },
-        { "label": "Inadmissibility", "url": "/other/inadmissibility/" },
-        { "label": "PR Card", "url": "/other/pr-card/" }
+        {
+          "label": "Appeals",
+          "url": "/other/appeals/"
+        },
+        {
+          "label": "Citizenship",
+          "url": "/other/citizenship/"
+        },
+        {
+          "label": "Inadmissibility",
+          "url": "/other/inadmissibility/"
+        },
+        {
+          "label": "PR Card",
+          "url": "/other/pr-card/"
+        }
       ]
     }
-  ]
+  ],
+  "bodyClass": "primary-button-style-solid primary-button-shape-pill secondary-button-style-solid secondary-button-shape-pill tertiary-button-style-solid tertiary-button-shape-pill form-field-style-solid form-field-shape-square form-field-border-all form-field-checkbox-type-icon form-field-checkbox-fill-solid form-field-checkbox-color-inverted form-field-checkbox-shape-square form-field-checkbox-layout-stack form-field-radio-type-icon form-field-radio-fill-solid form-field-radio-color-normal form-field-radio-shape-pill form-field-radio-layout-stack form-field-survey-fill-solid form-field-survey-color-normal form-field-survey-shape-pill form-field-hover-focus-outline form-submit-button-style-label header-overlay-alignment-center header-width-inset tweak-transparent-header tweak-fixed-header-style-basic tweak-blog-alternating-side-by-side-width-inset tweak-blog-alternating-side-by-side-image-aspect-ratio-11-square tweak-blog-alternating-side-by-side-text-alignment-left tweak-blog-alternating-side-by-side-read-more-style-show tweak-blog-alternating-side-by-side-image-text-alignment-middle tweak-blog-alternating-side-by-side-delimiter-bullet tweak-blog-alternating-side-by-side-meta-position-top tweak-blog-alternating-side-by-side-primary-meta-categories tweak-blog-alternating-side-by-side-secondary-meta-date tweak-blog-alternating-side-by-side-excerpt-show tweak-blog-basic-grid-width-inset tweak-blog-basic-grid-image-aspect-ratio-32-standard tweak-blog-basic-grid-text-alignment-center tweak-blog-basic-grid-delimiter-bullet tweak-blog-basic-grid-image-placement-above tweak-blog-basic-grid-read-more-style-show tweak-blog-basic-grid-primary-meta-categories tweak-blog-basic-grid-secondary-meta-none tweak-blog-basic-grid-excerpt-show tweak-blog-item-width-narrow tweak-blog-item-text-alignment-center tweak-blog-item-meta-position-above-title tweak-blog-item-show-categories tweak-blog-item-show-author-profile tweak-blog-item-delimiter-pipe tweak-blog-masonry-width-full tweak-blog-masonry-text-alignment-center tweak-blog-masonry-primary-meta-categories tweak-blog-masonry-secondary-meta-date tweak-blog-masonry-meta-position-top tweak-blog-masonry-read-more-style-show tweak-blog-masonry-delimiter-space tweak-blog-masonry-image-placement-above tweak-blog-masonry-excerpt-show tweak-blog-side-by-side-width-inset tweak-blog-side-by-side-image-placement-left tweak-blog-side-by-side-image-aspect-ratio-11-square tweak-blog-side-by-side-primary-meta-categories tweak-blog-side-by-side-secondary-meta-date tweak-blog-side-by-side-meta-position-top tweak-blog-side-by-side-text-alignment-left tweak-blog-side-by-side-image-text-alignment-middle tweak-blog-side-by-side-read-more-style-show tweak-blog-side-by-side-delimiter-bullet tweak-blog-side-by-side-excerpt-show tweak-blog-single-column-width-inset tweak-blog-single-column-text-alignment-center tweak-blog-single-column-image-placement-above tweak-blog-single-column-delimiter-bullet tweak-blog-single-column-read-more-style-show tweak-blog-single-column-primary-meta-categories tweak-blog-single-column-secondary-meta-date tweak-blog-single-column-meta-position-top tweak-blog-single-column-content-excerpt-and-title tweak-events-stacked-width-inset tweak-events-stacked-height-small tweak-events-stacked-show-past-events tweak-events-stacked-show-thumbnails tweak-events-stacked-thumbnail-size-32-standard tweak-events-stacked-date-style-side-tag tweak-events-stacked-show-time tweak-events-stacked-show-location tweak-events-stacked-ical-gcal-links tweak-events-stacked-show-excerpt tweak-global-animations-complexity-level-detailed tweak-global-animations-animation-style-fade tweak-global-animations-animation-type-none tweak-global-animations-animation-curve-ease tweak-portfolio-grid-basic-width-inset tweak-portfolio-grid-basic-height-medium tweak-portfolio-grid-basic-image-aspect-ratio-43-four-three tweak-portfolio-grid-basic-text-alignment-left tweak-portfolio-grid-basic-hover-effect-zoom tweak-portfolio-grid-overlay-width-full tweak-portfolio-grid-overlay-height-small tweak-portfolio-grid-overlay-image-aspect-ratio-43-four-three tweak-portfolio-grid-overlay-text-placement-center tweak-portfolio-grid-overlay-show-text-after-hover tweak-portfolio-index-background-link-format-stacked tweak-portfolio-index-background-width-full-bleed tweak-portfolio-index-background-height-large tweak-portfolio-index-background-vertical-alignment-middle tweak-portfolio-index-background-horizontal-alignment-center tweak-portfolio-index-background-delimiter-none tweak-portfolio-index-background-animation-type-fade tweak-portfolio-index-background-animation-duration-medium tweak-portfolio-hover-follow-layout-inline tweak-portfolio-hover-follow-delimiter-forward-slash tweak-portfolio-hover-follow-animation-type-fade tweak-portfolio-hover-follow-animation-duration-medium tweak-portfolio-hover-static-layout-stacked tweak-portfolio-hover-static-delimiter-forward-slash tweak-portfolio-hover-static-animation-type-scale-up tweak-portfolio-hover-static-animation-duration-medium tweak-product-basic-item-product-variant-display-dropdown tweak-product-basic-item-product-subscription-display-radio tweak-product-basic-item-product-subscription-border-shape-square tweak-product-basic-item-width-full tweak-product-basic-item-gallery-aspect-ratio-34-three-four-vertical tweak-product-basic-item-text-alignment-left tweak-product-basic-item-navigation-breadcrumbs tweak-product-basic-item-description-position-below-price tweak-product-basic-item-description-position-mobile-below-add-to-cart-button tweak-product-basic-item-content-alignment-top tweak-product-basic-item-gallery-design-slideshow tweak-product-basic-item-gallery-placement-left tweak-product-basic-item-thumbnail-placement-side tweak-product-basic-item-click-action-none tweak-product-basic-item-hover-action-none tweak-product-basic-item-variant-picker-layout-dropdowns tweak-product-basic-item-add-to-cart-standalone tweak-product-basic-item-add-to-cart-mobile-standalone tweak-products-width-inset tweak-products-image-aspect-ratio-11-square tweak-products-text-alignment-left tweak-products-price-show tweak-products-nested-category-type-top tweak-products-category-title tweak-products-header-text-alignment-middle tweak-products-breadcrumbs image-block-poster-text-alignment-center image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-text-alignment-left hide-opentable-icons opentable-style-dark tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-cad mobile-style-available sqs-seven-one"
 }
