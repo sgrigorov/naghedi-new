@@ -63,15 +63,22 @@
         function setActiveNav() {
           var path = window.location.pathname.replace(/\/+$/, '') || '/';
           document.querySelectorAll('.header-nav-item').forEach(function (item) {
-            var a = item.querySelector('a[href]');
-            if (!a) return;
-            var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
-            if (href === path) {
+            var links = item.querySelectorAll('a[href]');
+            var match = false;
+            links.forEach(function (a) {
+              var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+              if (!href || href.charAt(0) !== '/') return;
+              if (href === path || (href !== '/' && (path === href || path.indexOf(href + '/') === 0))) {
+                match = true;
+                a.setAttribute('aria-current', 'page');
+              } else {
+                a.removeAttribute('aria-current');
+              }
+            });
+            if (match) {
               item.classList.add('header-nav-item--active');
-              a.setAttribute('aria-current', 'page');
             } else {
               item.classList.remove('header-nav-item--active');
-              a.removeAttribute('aria-current');
             }
           });
         }
