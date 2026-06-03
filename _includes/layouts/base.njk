@@ -122,5 +122,26 @@
         }
       })();
     </script>
+    <script>
+      // Squarespace accordion blocks (.sqs-block-accordion) rely on their JS
+      // to toggle .accordion-item__dropdown--open and data-is-open. We don't
+      // ship that JS, so the items would stay collapsed. Wire up click + key.
+      (function () {
+        document.addEventListener('click', function (e) {
+          var btn = e.target.closest && e.target.closest('.accordion-item__click-target');
+          if (!btn) return;
+          var item = btn.closest('.accordion-item');
+          if (!item) return;
+          var dropdown = item.querySelector('.accordion-item__dropdown');
+          var icon = item.querySelector('.accordion-icon-container');
+          var open = item.getAttribute('data-is-open') === 'true';
+          var next = !open;
+          item.setAttribute('data-is-open', String(next));
+          if (icon) icon.setAttribute('data-is-open', String(next));
+          btn.setAttribute('aria-expanded', String(next));
+          if (dropdown) dropdown.classList.toggle('accordion-item__dropdown--open', next);
+        });
+      })();
+    </script>
   </body>
 </html>
