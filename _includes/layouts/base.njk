@@ -90,6 +90,16 @@
         -webkit-clip-path: circle(49% at 50% 50%);
       }
       .sqs-block-image .imageEffectContainer { display: none; }
+      /* Blog-post author avatar: parent .author-avatar span is sized 50x50
+         by site.css; constrain the img so it doesn't render at natural size
+         (Squarespace's AuthorProfileImageLoader normally handles this). */
+      .author-avatar .author-avatar-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+      }
     </style>
     <div id="siteWrapper" class="clearfix site-wrapper">
       {% include "partials/header.njk" %}
