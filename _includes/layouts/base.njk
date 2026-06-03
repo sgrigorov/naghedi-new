@@ -15,6 +15,20 @@
       .background-image-fx,
       img[data-src]:not([src]):not([srcset]) { visibility: visible !important; }
     </style>
+    {% if page.url != "/" %}
+    <style>
+      /* Footer is themed bright-inverse (white text) which works only over the
+         home page's dark hero. On every other page the surrounding background
+         is light, so force the footer text dark for legibility. */
+      #footer-sections,
+      #footer-sections p,
+      #footer-sections h1, #footer-sections h2, #footer-sections h3,
+      #footer-sections h4, #footer-sections h5, #footer-sections h6,
+      #footer-sections li,
+      #footer-sections span { color: #1a1a1a !important; }
+      #footer-sections a { color: #1a3d8f !important; }
+    </style>
+    {% endif %}
     {% block head %}{% endblock %}
   </head>
   <body class="{{ site.bodyClass }}" tabindex="-1">
