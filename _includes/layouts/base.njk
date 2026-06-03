@@ -80,9 +80,14 @@
         clip-path: circle(50% at 50% 50%) !important;
         -webkit-clip-path: circle(50% at 50% 50%) !important;
       }
-      /* Animated "liquid" image effect (was Squarespace WebGL). */
+      /* Animated "liquid" image effect (was Squarespace WebGL).
+         Apply the circular clip-path on the same element as the filter
+         so the clip is applied after the displacement and the visible
+         edge stays perfectly steady. */
       .sqs-block-image:has(.imageEffectContainer[data-effect*="liquid"]) img {
         filter: url(#liquid-effect);
+        clip-path: circle(49% at 50% 50%);
+        -webkit-clip-path: circle(49% at 50% 50%);
       }
       .sqs-block-image .imageEffectContainer { display: none; }
     </style>
