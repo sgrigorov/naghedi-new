@@ -43,6 +43,13 @@
       .header-nav-wrapper a *,
       .header-title a,
       .header-actions a { color: #1a1a1a !important; }
+      /* The "Free Assessment Form" and "Book Appointment" buttons in the
+         nav are styled as filled buttons (white text on a colored fill).
+         Restore white text on those (the rule above made them unreadable). */
+      .header-nav-item--external a,
+      .header-nav-item--external a *,
+      .header-actions-action--cta a,
+      .header-actions-action--cta a * { color: #ffffff !important; }
       #footer-sections,
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
