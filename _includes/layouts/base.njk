@@ -54,14 +54,14 @@
       .header-actions-action--cta a *,
       .header-actions-action--cta .sqs-button-element--primary,
       .header-actions-action--cta .sqs-button-element--primary * { color: #ffffff !important; }
-      /* In-page primary buttons in the our-team page body resolve
-         --primaryButtonTextColor to a dark blue that is unreadable on
-         the brand-color button fill. Scope the override to #page so the
-         footer's own button styling is left alone. */
-      #page .sqs-block-button-element--primary,
-      #page .sqs-button-element--primary,
-      #page a.sqs-block-button-element--primary,
-      #page a.sqs-button-element--primary { color: #ffffff !important; }
+      /* In-page primary buttons (e.g. the "Book Appointment" CTA on our-team)
+         resolve --primaryButtonTextColor from the section theme tokens; on
+         non-home pages it lands as a dark blue that is unreadable on the
+         brand-color button fill. Force white text on every primary button. */
+      .sqs-block-button-element--primary,
+      .sqs-button-element--primary,
+      a.sqs-block-button-element--primary,
+      a.sqs-button-element--primary { color: #ffffff !important; }
       #footer-sections,
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
