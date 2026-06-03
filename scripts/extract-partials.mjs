@@ -19,6 +19,9 @@ const OUT_PAGES = path.resolve(ROOT, "src/pages");
 
 // -------- path rewrites applied to every extracted chunk -----------------
 const PATH_REWRITES = [
+  // Strip Squarespace CDN resize directives — they have no meaning for static files
+  // and any %3F form breaks GH Pages path matching (literal ? in path != query).
+  [/(\.(?:png|jpe?g|gif|webp|svg|ico|css|js))(?:%3F|\?)format=[0-9]+w/gi, "$1"],
   // CDN folder remaps (handle ../ and plain forms).
   [/\.\.\/assets\.squarespace\.com\//g, "/assets/vendor-sqs/"],
   [/\.\.\/static1\.squarespace\.com\//g, "/assets/site-sqs/"],
