@@ -1,0 +1,45 @@
+{
+  "title": "NAGHEDI Immigration Inc",
+  "description": "NAGHEDI Immigration Inc. is a Calgary-based company providing specialized Canadian immigration and citizenship services.",
+  "lang": "en-CA",
+  "logo": "/assets/images/logo.png",
+  "external": {
+    "freeAssessment": "https://secure.officio.ca/qnr?id=4902",
+    "bookAppointment": "https://calendly.com/naghedi-booking/"
+  },
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Our Team", "url": "/our-team/" },
+    { "label": "Services", "url": "/services/" },
+    {
+      "label": "Permanent Residence",
+      "url": "/permanent-residence/",
+      "children": [
+        { "label": "Economic Class", "url": "/permanent-residence/economic-class/" },
+        { "label": "Family Class", "url": "/permanent-residence/family-class/" },
+        { "label": "Business Class", "url": "/permanent-residence/business-class/" },
+        { "label": "Humanitarian & Compassionate", "url": "/permanent-residence/humanitarian-compassionate/" },
+        { "label": "Refugee Class", "url": "/permanent-residence/refugee-class/" }
+      ]
+    },
+    {
+      "label": "Temporary Residence",
+      "url": "/temporary-residence/",
+      "children": [
+        { "label": "Study in Canada", "url": "/temporary-residence/study-in-canada/" },
+        { "label": "Work in Canada", "url": "/temporary-residence/work-in-canada/" },
+        { "label": "Visit Canada", "url": "/temporary-residence/visit-canada/" }
+      ]
+    },
+    {
+      "label": "Other",
+      "url": "/other/",
+      "children": [
+        { "label": "Appeals", "url": "/other/appeals/" },
+        { "label": "Citizenship", "url": "/other/citizenship/" },
+        { "label": "Inadmissibility", "url": "/other/inadmissibility/" },
+        { "label": "PR Card", "url": "/other/pr-card/" }
+      ]
+    }
+  ]
+}

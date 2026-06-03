@@ -1,0 +1,23 @@
+{# Shared site chrome: header + footer come from partials, every page extends this. #}
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/static.css">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div id="siteWrapper" class="site-wrapper">
+      {% include "partials/header.njk" %}
+      <main id="page" class="page-main">
+        {{ content | safe }}
+      </main>
+      {% include "partials/footer.njk" %}
+    </div>
+  </body>
+</html>
