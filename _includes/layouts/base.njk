@@ -14,6 +14,12 @@
          We don't ship that JS, so reveal them unconditionally. */
       .background-image-fx,
       img[data-src]:not([src]):not([srcset]) { visibility: visible !important; }
+      /* Make sure the Services dropdown panel is transparent on every page.
+         The bundled CSS doesn't actually paint it, but a parent or theme
+         token can make it appear black. Force transparency + ensure the
+         dropdown links inherit a readable color. */
+      .header-nav-folder-content,
+      .header-nav-folder-content > * { background: transparent !important; background-color: transparent !important; }
     </style>
     {% if page.url != "/" %}
     <style>
@@ -35,7 +41,6 @@
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
       #footer-sections a * { color: #1a3d8f !important; }
-      .header-nav-folder-content { background: transparent !important; }
     </style>
     {% endif %}
     {% block head %}{% endblock %}
