@@ -68,6 +68,12 @@
     <style>
       .sqs-block-image:has(.imageEffectContainer[data-effect*="liquid"]) img {
         filter: url(#liquid-effect);
+        aspect-ratio: 1 / 1;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
         clip-path: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
       }
