@@ -17,9 +17,20 @@
     </style>
     {% if page.url != "/" %}
     <style>
-      /* Footer is themed bright-inverse (white text) which works only over the
-         home page's dark hero. On every other page the surrounding background
-         is light, so force the footer text dark for legibility. */
+      /* The site uses tweak-transparent-header: nav text is white so it reads
+         over the home page's dark hero. Other pages don't have that hero, so
+         white-on-white nav disappears. Force dark nav + dark footer text on
+         every page except home. */
+      body {
+        --navigationLinkColor: hsla(var(--black-hsl), 1) !important;
+        --gradientHeaderNavigationColor: hsla(var(--black-hsl), 1) !important;
+        --solidHeaderNavigationColor: hsla(var(--black-hsl), 1) !important;
+        --siteTitleColor: hsla(var(--black-hsl), 1) !important;
+      }
+      .header-nav-wrapper a,
+      .header-nav-wrapper a *,
+      .header-title a,
+      .header-actions a { color: #1a1a1a !important; }
       #footer-sections,
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
