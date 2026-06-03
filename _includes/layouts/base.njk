@@ -45,13 +45,12 @@
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
       #footer-sections a * { color: #1a3d8f !important; }
-      /* Guarantee a visible underline for the active top-level nav item,
-         including the Services folder when on one of its sub-pages.
-         Targets only the item's first direct anchor (the visible title),
-         not links inside the dropdown panel. */
-      .header-nav-item--active > a {
+      /* Underline the active item inside the Services dropdown so users
+         can see which sub-page they are on. The native Squarespace rule
+         only underlines top-level nav items. */
+      .header-nav-folder-item--active > a {
         text-decoration: underline !important;
-        text-underline-offset: 6px !important;
+        text-underline-offset: 4px !important;
         text-decoration-thickness: 2px !important;
       }
     </style>
@@ -88,6 +87,18 @@
               if (topLink) topLink.setAttribute('aria-current', 'page');
             } else {
               item.classList.remove('header-nav-item--active');
+            }
+          });
+          // Mark the matching dropdown item inside the Services folder.
+          document.querySelectorAll('.header-nav-folder-item').forEach(function (item) {
+            var a = item.querySelector('a[href]');
+            if (!a) return;
+            var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+            if (href && href.charAt(0) === '/' &&
+                (href === path || (href !== '/' && path.indexOf(href + '/') === 0))) {
+              item.classList.add('header-nav-folder-item--active');
+            } else {
+              item.classList.remove('header-nav-folder-item--active');
             }
           });
         }
