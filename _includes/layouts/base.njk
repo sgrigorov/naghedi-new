@@ -14,12 +14,17 @@
          We don't ship that JS, so reveal them unconditionally. */
       .background-image-fx,
       img[data-src]:not([src]):not([srcset]) { visibility: visible !important; }
-      /* Make sure the Services dropdown panel is transparent on every page.
-         The bundled CSS doesn't actually paint it, but a parent or theme
-         token can make it appear black. Force transparency + ensure the
-         dropdown links inherit a readable color. */
+      /* Make the Services dropdown a readable white panel on every page.
+         The underlying page wrapper has data-section-theme="black", which
+         makes the surrounding area show through as black behind the
+         transparent dropdown. Paint our own panel and force dark text. */
+      .header-nav-folder-content {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        border-radius: 4px !important;
+      }
       .header-nav-folder-content,
-      .header-nav-folder-content > * { background: transparent !important; background-color: transparent !important; }
+      .header-nav-folder-content * { color: #1a1a1a !important; }
     </style>
     {% if page.url != "/" %}
     <style>
