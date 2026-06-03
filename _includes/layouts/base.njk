@@ -9,6 +9,12 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="stylesheet" href="/assets/css/static.css">
+    <style>
+      /* Squarespace hides these classes until its runtime JS renders them.
+         We don't ship that JS, so reveal them unconditionally. */
+      .background-image-fx,
+      img[data-src]:not([src]):not([srcset]) { visibility: visible !important; }
+    </style>
     {% block head %}{% endblock %}
   </head>
   <body>
