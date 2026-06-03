@@ -45,6 +45,15 @@
       #footer-sections * { color: #1a1a1a !important; }
       #footer-sections a,
       #footer-sections a * { color: #1a3d8f !important; }
+      /* Guarantee a visible underline for the active top-level nav item,
+         including the Services folder when on one of its sub-pages.
+         Targets only the item's first direct anchor (the visible title),
+         not links inside the dropdown panel. */
+      .header-nav-item--active > a {
+        text-decoration: underline !important;
+        text-underline-offset: 6px !important;
+        text-decoration-thickness: 2px !important;
+      }
     </style>
     {% endif %}
     {% block head %}{% endblock %}
@@ -64,19 +73,19 @@
           var path = window.location.pathname.replace(/\/+$/, '') || '/';
           document.querySelectorAll('.header-nav-item').forEach(function (item) {
             var links = item.querySelectorAll('a[href]');
+            var topLink = links[0];
             var match = false;
             links.forEach(function (a) {
               var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
               if (!href || href.charAt(0) !== '/') return;
-              if (href === path || (href !== '/' && (path === href || path.indexOf(href + '/') === 0))) {
+              if (href === path || (href !== '/' && path.indexOf(href + '/') === 0)) {
                 match = true;
-                a.setAttribute('aria-current', 'page');
-              } else {
-                a.removeAttribute('aria-current');
               }
+              a.removeAttribute('aria-current');
             });
             if (match) {
               item.classList.add('header-nav-item--active');
+              if (topLink) topLink.setAttribute('aria-current', 'page');
             } else {
               item.classList.remove('header-nav-item--active');
             }
