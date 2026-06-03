@@ -46,6 +46,33 @@
       {% include "partials/footer.njk" %}
     </div>
     <script>
+      // Squarespace bakes header-nav-item--active onto the home link in every
+      // page's static HTML. Move that class to the link that actually matches
+      // window.location.pathname so the underline indicator follows the page.
+      (function () {
+        function setActiveNav() {
+          var path = window.location.pathname.replace(/\/+$/, '') || '/';
+          document.querySelectorAll('.header-nav-item').forEach(function (item) {
+            var a = item.querySelector('a[href]');
+            if (!a) return;
+            var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+            if (href === path) {
+              item.classList.add('header-nav-item--active');
+              a.setAttribute('aria-current', 'page');
+            } else {
+              item.classList.remove('header-nav-item--active');
+              a.removeAttribute('aria-current');
+            }
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', setActiveNav);
+        } else {
+          setActiveNav();
+        }
+      })();
+    </script>
+    <script>
       // Squarespace CSS hides images until parent gets data-loaded.
       // Their loader JS used to set it; we don't ship the loader, so do it ourselves.
       (function () {
